@@ -17,7 +17,7 @@ const GolfCoursesPage: React.FC = () => {
   useEffect(() => {
     const fetchGolfCourses = async () => {
       try {
-        const response = await fetch("http://localhost:5001/api/golf-courses");
+        const response = await fetch("https://teeoff2.onrender.com/api/golf-courses");
         if (!response.ok) throw new Error("Failed to fetch data");
 
         const data = await response.json();

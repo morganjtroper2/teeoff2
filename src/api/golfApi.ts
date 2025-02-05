@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Base API URL for backend requests
 const api = axios.create({
-  baseURL: "http://localhost:5001/api",
+  baseURL: "https://teeoff2.onrender.com/api/golf-courses",
 });
 
 // Fetch golf courses by search query from backend
