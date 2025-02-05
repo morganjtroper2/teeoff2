@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import golfRoutes from "./routes/golfRoutes"; // Import golf course routes
-import hotelRoutes from "./routes/hotelRoutes"; // Import hotel routes
+// import hotelRoutes from "./routes/hotelRoutes"; // Import hotel routes
 
 dotenv.config();
 
@@ -20,7 +20,7 @@ app.use(
 
 // ✅ Add routes
 app.use("/api/golf-courses", golfRoutes);
-app.use("/api/hotels", hotelRoutes);
+// app.use("/api/hotels", hotelRoutes);
 
 app.get("/", (req, res) => {
   res.send("Backend is running!");

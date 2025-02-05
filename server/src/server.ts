@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import golfRoutes from "./routes/golfRoutes";
-import hotelRoutes from "./routes/hotelRoutes";
+// import hotelRoutes from "./routes/hotelRoutes";
 
 const app = express();
 
