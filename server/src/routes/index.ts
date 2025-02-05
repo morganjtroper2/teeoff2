@@ -1,10 +1,8 @@
-import apiRoutes from './api/index.js'
-import authRoutes from './authRoutes.js'
-import express from 'express';
+import express from "express";
+import { userRouter } from "./api/userRoutes.js"; // ✅ Corrected Import
 
 const router = express.Router();
 
-router.use('/api', apiRoutes);
-router.use('/auth', authRoutes);
+router.use("/users", userRouter);
 
-export default router;
+export { router as apiRouter };

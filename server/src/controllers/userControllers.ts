@@ -1,14 +1,24 @@
 import { Request, Response } from "express";
-import { User } from "../models/user";
+import { User } from "../models/user.js";
 
-// Get All Users (excluding passwords)
-export const getAllUsers = async (_req: Request, res: Response) => {
+// ✅ Fix: Ensure these functions are correctly exported
+export const getUserById = async (req: Request, res: Response) => {
   try {
-    const users = await User.findAll({
+    const user = await User.findByPk(req.params.id, {
       attributes: { exclude: ["password"] },
     });
-    res.json(users);
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.json(user);
   } catch (error: any) {
     res.status(500).json({ message: error.message });
   }
 };
+
+// ✅ Add missing functions
+export const createUser = async (req: Request, res: Response) => { /*...*/ };
+export const updateUser = async (req: Request, res: Response) => { /*...*/ };
+export const deleteUser = async (req: Request, res: Response) => { /*...*/ };

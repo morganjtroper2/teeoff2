@@ -1,27 +1,39 @@
-import express from 'express';
-import {
-  getAllUsers,
-  getUserById,
-  createUser,
-  updateUser,
-  deleteUser,
-} from '../../controllers/userControllers.js';
+import express from "express";
+import { getUserById, createUser, updateUser, deleteUser } from "../../controllers/userControllers.js";
 
 const router = express.Router();
 
-// GET /users - Get all users
-router.get('/', getAllUsers);
+// ✅ Fix: Use Express middleware-style async functions
+router.get("/:id", async (req, res, next) => {
+    try {
+        await getUserById(req, res);
+    } catch (error) {
+        next(error);
+    }
+});
 
-// GET /users/:id - Get a user by id
-router.get('/:id', getUserById);
+router.post("/", async (req, res, next) => {
+    try {
+        await createUser(req, res);
+    } catch (error) {
+        next(error);
+    }
+});
 
-// POST /users - Create a new user
-router.post('/', createUser);
+router.put("/:id", async (req, res, next) => {
+    try {
+        await updateUser(req, res);
+    } catch (error) {
+        next(error);
+    }
+});
 
-// PUT /users/:id - Update a user by id
-router.put('/:id', updateUser);
-
-// DELETE /users/:id - Delete a user by id
-router.delete('/:id', deleteUser);
+router.delete("/:id", async (req, res, next) => {
+    try {
+        await deleteUser(req, res);
+    } catch (error) {
+        next(error);
+    }
+});
 
 export { router as userRouter };
