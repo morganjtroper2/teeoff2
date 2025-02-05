@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    /* 🏗️ Output & Compilation */
+    "outDir": "dist",              // Output directory for compiled JS
+    "rootDir": "server/src",        // Root directory for TypeScript files
+    "target": "ESNext",             // Use latest JavaScript features
+    "module": "NodeNext",           // Use ES Module system (for backend compatibility)
+    "moduleResolution": "NodeNext", // Proper module resolution for ESM/CommonJS
+    "resolveJsonModule": true,      // Allow JSON imports
+
+    /* 🚀 React & JSX Support */
+    "jsx": "react-jsx",             // Enables support for JSX syntax in React
+
+    /* 🛠️ Module Interoperability */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,        // Fixes issues importing CommonJS modules
+    "forceConsistentCasingInFileNames": true,
+
+    /* ✅ Type Checking */
+    "strict": true,                 // Enable strict type-checking
+    "skipLibCheck": true,           // Skip checking node_modules type definitions
+
+    /* 🏗️ Backend-Specific Config */
+    "experimentalDecorators": true, // Enable experimental decorators
+    "emitDecoratorMetadata": true   // Emit metadata for decorators
+  },
+  "include": ["server/src"],        // Include all TypeScript files in `server/src`
+  "exclude": ["node_modules", "dist", "frontend"]
+}
