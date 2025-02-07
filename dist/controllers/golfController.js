@@ -7,7 +7,7 @@ exports.getGolfCourseById = exports.getGolfCourses = void 0;
 const axios_1 = __importDefault(require("axios"));
 // Hardcoded API Key for Golf Course API
 const GOLF_API_KEY = "LF2I3IEZ6PRD64KTMKCEYYRKIU";
-// ✅ Fetch Golf Courses
+
 const getGolfCourses = async (req, res) => {
     try {
         const searchQuery = req.query.search_query || "golf";
@@ -29,7 +29,7 @@ const getGolfCourses = async (req, res) => {
     }
 };
 exports.getGolfCourses = getGolfCourses;
-// ✅ Fetch Golf Course by ID
+
 const getGolfCourseById = async (req, res) => {
     try {
         const { id } = req.params;

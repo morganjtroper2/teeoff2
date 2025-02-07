@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
 const sequelize_1 = require("sequelize");
 const bcrypt_1 = __importDefault(require("bcrypt"));
-const sequelize = new sequelize_1.Sequelize("sqlite::memory:"); // Replace with actual DB connection
+const sequelize = new sequelize_1.Sequelize("sqlite::memory:");
 class User extends sequelize_1.Model {
     username;
     password;

@@ -3,7 +3,6 @@ import { getUserById, createUser, updateUser, deleteUser } from "../../controlle
 
 const router = express.Router();
 
-// ✅ Fix: Use Express middleware-style async functions
 router.get("/:id", async (req, res, next) => {
     try {
         await getUserById(req, res);

@@ -1,7 +1,7 @@
 import { DataTypes, Sequelize, Model } from "sequelize";
 import bcrypt from "bcrypt";
 
-const sequelize = new Sequelize("sqlite::memory:"); // Replace with actual DB connection
+const sequelize = new Sequelize("sqlite::memory:");
 
 export class User extends Model {
   public username!: string;

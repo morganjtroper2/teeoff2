@@ -1,10 +1,8 @@
 import { Request, Response } from "express";
 import axios from "axios";
 
-// Hardcoded API Key for Golf Course API
 const GOLF_API_KEY = "LF2I3IEZ6PRD64KTMKCEYYRKIU";
 
-// ✅ Define the expected response type from the API
 interface GolfCourse {
   id: number;
   club_name: string;
@@ -20,7 +18,6 @@ interface GolfApiResponse {
   courses: GolfCourse[];
 }
 
-// ✅ Fetch Golf Courses
 export const getGolfCourses = async (req: Request, res: Response) => {
   try {
     const searchQuery = (req.query.search_query as string) || "golf";
@@ -45,7 +42,6 @@ export const getGolfCourses = async (req: Request, res: Response) => {
   }
 };
 
-// ✅ Fetch Golf Course by ID
 export const getGolfCourseById = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;

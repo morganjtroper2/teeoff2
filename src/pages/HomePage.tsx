@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 export default function HomePage() {
   useEffect(() => {
-    document.body.style.overflow = "hidden"; // Disable scrolling when the component mounts
+    document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = "auto"; // Re-enable scrolling when unmounting
+      document.body.style.overflow = "auto";
     };
   }, []);
 

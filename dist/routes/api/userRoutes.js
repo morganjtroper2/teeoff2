@@ -8,7 +8,7 @@ const express_1 = __importDefault(require("express"));
 const userControllers_js_1 = require("../../controllers/userControllers.js");
 const router = express_1.default.Router();
 exports.userRouter = router;
-// ✅ Fix: Use Express middleware-style async functions
+
 router.get("/:id", async (req, res, next) => {
     try {
         await (0, userControllers_js_1.getUserById)(req, res);

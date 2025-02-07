@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteUser = exports.updateUser = exports.createUser = exports.getUserById = void 0;
 const user_js_1 = require("../models/user.js");
-// ✅ Fix: Ensure these functions are correctly exported
+
 const getUserById = async (req, res) => {
     try {
         const user = await user_js_1.User.findByPk(req.params.id, {

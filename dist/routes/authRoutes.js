@@ -33,7 +33,7 @@ const login = async (req, res, next) => {
 exports.login = login;
 const router = (0, express_1.Router)();
 exports.authRouter = router;
-// ✅ Fix: Use Express middleware-style function instead of direct call
+
 router.post("/login", async (req, res, next) => {
     try {
         await (0, exports.login)(req, res, next);

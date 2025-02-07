@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { User } from "../models/user.js";
 
-// ✅ Fix: Ensure these functions are correctly exported
 export const getUserById = async (req: Request, res: Response) => {
   try {
     const user = await User.findByPk(req.params.id, {

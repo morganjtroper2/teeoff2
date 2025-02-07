@@ -1,4 +1,4 @@
-import { userRouter } from "./userRoutes.js"; // ✅ Correct Import
+import { userRouter } from "./userRoutes.js";
 import express from "express";
 
 const router = express.Router();

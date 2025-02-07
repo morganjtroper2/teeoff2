@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.golfRouter = void 0;
 const express_1 = __importDefault(require("express"));
-const golfController_js_1 = require("../controllers/golfController.js"); // ✅ Fixed Import Path
+const golfController_js_1 = require("../controllers/golfController.js");
 const router = express_1.default.Router();
 exports.golfRouter = router;
 router.get("/golf-courses", golfController_js_1.getGolfCourses);

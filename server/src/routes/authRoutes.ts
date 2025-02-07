@@ -36,7 +36,6 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
 
 const router = Router();
 
-// ✅ Fix: Use Express middleware-style function instead of direct call
 router.post("/login", async (req, res, next) => {
     try {
         await login(req, res, next);

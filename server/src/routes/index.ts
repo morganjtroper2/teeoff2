@@ -1,5 +1,5 @@
 import express from "express";
-import { userRouter } from "./api/userRoutes.js"; // ✅ Corrected Import
+import { userRouter } from "./api/userRoutes.js";
 
 const router = express.Router();
 

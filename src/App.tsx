@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 import GolfCoursesPage from "./pages/GolfCoursesPage";
 import HotelPage from "./pages/HotelPage";
 import FlightsPage from "./pages/FlightsPage";
-import Layout from "./Components/Layout"; // Import Layout
+import Layout from "./Components/Layout";
 
 const App: React.FC = () => {
   return (
